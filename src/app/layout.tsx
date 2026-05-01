@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
-import { cookies } from "next/headers";
 import { ThemeProvider } from "@/lib/theme";
 import { I18nProvider } from "@/lib/i18n";
 import LoadingScreen from "@/components/ui/LoadingScreen";
@@ -37,16 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const theme = cookieStore.get("artemis-theme")?.value ?? "light";
-
   return (
-    <html lang="en" className={theme === "dark" ? "dark" : ""} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Fallback for first-time visitors with no cookie — syncs localStorage → cookie */}
         <script

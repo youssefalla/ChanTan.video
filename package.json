@@ -9,11 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.91.1",
-    "@google/generative-ai": "^0.24.1",
     "@radix-ui/react-slot": "^1.2.4",
-    "@supabase/ssr": "^0.5.2",
-    "@supabase/supabase-js": "^2.104.1",
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.474.0",
