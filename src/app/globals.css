@@ -867,43 +867,9 @@ body { overflow-x: clip; }
 }
 .floaty { animation: floaty 6s ease-in-out infinite; }
 
-/* ── Hero grid + mesh ────────────────────────── */
-.hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.hero-bg .mesh {
-  position: absolute; inset: -20%;
-  background:
-    radial-gradient(40% 35% at 20% 30%, rgba(124,58,237,.10), transparent 60%),
-    radial-gradient(35% 30% at 80% 20%, rgba(124,58,237,.07), transparent 60%),
-    radial-gradient(45% 40% at 60% 80%, rgba(0,0,0,.04), transparent 60%);
-  filter: blur(40px);
-  animation: drift 22s ease-in-out infinite alternate;
-}
-.dark .hero-bg .mesh {
-  background:
-    radial-gradient(35% 30% at 25% 30%, rgba(124,58,237,.18), transparent 60%),
-    radial-gradient(30% 30% at 75% 25%, rgba(124,58,237,.10), transparent 60%),
-    radial-gradient(40% 35% at 60% 80%, rgba(124,58,237,.06), transparent 60%);
-  filter: blur(50px);
-}
-@keyframes drift {
-  0%   { transform: translate3d(0,0,0) scale(1); }
-  50%  { transform: translate3d(2%,-1%,0) scale(1.04); }
-  100% { transform: translate3d(-1%,2%,0) scale(1.02); }
-}
+.hero-bg { display: none; }
 .hero-grid { display: none; }
-
-/* ── Gold particles (dark mode) ──────────────── */
-.particles { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease; }
-.dark .particles { opacity: 1; }
-.particles span {
-  position: absolute; width: 2px; height: 2px; border-radius: 50%;
-  background: #7C3AED; box-shadow: 0 0 6px #7C3AED, 0 0 12px rgba(124,58,237,.5);
-  animation: twinkle 4s ease-in-out infinite;
-}
-@keyframes twinkle {
-  0%,100% { opacity: .15; transform: scale(.8); }
-  50%     { opacity: .95; transform: scale(1.2); }
-}
+.particles { display: none; }
 
 /* ── Blur-in headline ────────────────────────── */
 .blur-headline { perspective: 800px; }
