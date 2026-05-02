@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useT } from "@/lib/i18n";
 
 const CanTanLogo = () => (
-  <img src="/logo-new.png" alt="CanTan·Video" height={32} style={{ objectFit: "contain", width: "auto" }} />
+  <div style={{ width: 28, height: 28, borderRadius: "0.5rem", background: "linear-gradient(135deg, #5B21B6, #7C3AED)", display: "grid", placeItems: "center" }}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.876v6.248a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" /></svg>
+  </div>
 );
 
 export default function Footer() {
@@ -16,8 +18,11 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "2.5rem" }}>
           {/* Brand */}
           <div style={{ gridColumn: "span 2" }}>
-            <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+            <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.625rem", textDecoration: "none" }}>
               <CanTanLogo />
+              <span className="font-display" style={{ fontSize: "1.1rem", color: "var(--text-primary)" }}>
+                CanTan<span style={{ color: "#7C3AED" }}>·</span>Video
+              </span>
             </Link>
             <p style={{ marginTop: "1.25rem", fontSize: "0.875rem", color: "var(--text-secondary)", maxWidth: "22rem", lineHeight: 1.7 }}>
               AI-powered video editing for creators who want to ship more and stress less.
