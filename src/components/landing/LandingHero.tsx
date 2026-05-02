@@ -155,7 +155,7 @@ export default function LandingHero() {
   }, []);
 
   return (
-    <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", overflow: "hidden", borderBottomLeftRadius: "2.5rem", borderBottomRightRadius: "2.5rem" }}>
+    <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", overflow: "hidden", borderBottomLeftRadius: "4rem", borderBottomRightRadius: "4rem" }}>
       {/* Purple wave gradient — hero only */}
       <div className="hero-wave-gradient" />
       <div className="hero-wave-streak" />
