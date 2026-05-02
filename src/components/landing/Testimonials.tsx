@@ -12,7 +12,7 @@ const Stars = () => (
 const col1 = [
   {
     stars: true,
-    quote: ""My editing time went from 6 hours to 20 minutes. That alone changed my whole content schedule."",
+    quote: "“My editing time went from 6 hours to 20 minutes. That alone changed my whole content schedule.”",
     display: true,
     name: "Layla Mercer",
     role: "Travel vlogger · 480K subs",
@@ -35,7 +35,7 @@ const col1 = [
 const col2 = [
   {
     stars: true,
-    quote: ""I shipped 4 videos in the time it used to take me to edit one. CanTan doesn't just save time — it changes what's possible in a week."",
+    quote: "“I shipped 4 videos in the time it used to take me to edit one. CanTan doesn’t just save time — it changes what’s possible in a week.”",
     display: true,
     large: true,
     name: "Sofia Navarro",
@@ -71,7 +71,7 @@ const col3 = [
   },
   {
     stars: true,
-    quote: ""Quiet, dependable, slightly magical. Feels like having a full edit suite in my back pocket."",
+    quote: "“Quiet, dependable, slightly magical. Feels like having a full edit suite in my back pocket.”",
     display: true,
     name: "Jonas Weber",
     role: "Documentary · Berlin",
