@@ -155,7 +155,7 @@ export default function LandingHero() {
   }, []);
 
   return (
-    <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", overflow: "hidden" }}>
+    <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", overflow: "hidden", borderBottomLeftRadius: "2.5rem", borderBottomRightRadius: "2.5rem" }}>
       {/* Purple wave gradient — hero only */}
       <div className="hero-wave-gradient" />
       <div className="hero-wave-streak" />
@@ -186,14 +186,14 @@ export default function LandingHero() {
             className="font-display blur-headline no-line"
             style={{ marginTop: "1.5rem", fontSize: "clamp(2.75rem, 6.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.03em", fontWeight: 800 }}
           >
-            <span className="bw hero-glass-word">Edit</span>{" "}
-            <span className="bw hero-glass-word">Videos</span>
+            <span className="bw">Edit</span>{" "}
+            <span className="bw">Videos</span>
             <br />
-            <span className="bw hero-glass-word">While</span>{" "}
-            <span className="bw hero-glass-word">You</span>
+            <span className="bw">While</span>{" "}
+            <span className="bw">You</span>
             <br />
             <span style={{ display: "inline-block" }}>
-              <em className="bw gold-shimmer not-italic hero-glass-word">Think.</em>
+              <em className="bw gold-shimmer not-italic">Think.</em>
               <span className="sleep-line" />
             </span>
           </h1>
