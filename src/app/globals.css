@@ -874,29 +874,13 @@ body { overflow-x: clip; }
 /* ── Hero purple wave background ─────────────── */
 .hero-wave-gradient {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 70% 70% at 0% 0%, #3b0da0 0%, transparent 55%),
-    radial-gradient(ellipse 55% 55% at 5% 90%, #6d28d9 0%, transparent 50%),
-    radial-gradient(ellipse 60% 50% at 40% 10%, #1e0760 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 100% 100%, #f3f0ff 0%, transparent 55%),
-    radial-gradient(ellipse 55% 55% at 100% 40%, #ede9fe 0%, transparent 55%),
-    linear-gradient(135deg, #5b21b6 0%, #a78bfa 45%, #ede9fe 75%, #ffffff 100%);
+  background: url('/hero-bg.png') center center / cover no-repeat;
 }
 .dark .hero-wave-gradient {
-  background:
-    radial-gradient(ellipse 70% 70% at 0% 0%, #1e0550 0%, transparent 55%),
-    radial-gradient(ellipse 55% 55% at 5% 90%, #2e1065 0%, transparent 50%),
-    radial-gradient(ellipse 60% 50% at 40% 10%, #0d0520 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 100% 100%, #120a2e 0%, transparent 55%),
-    linear-gradient(135deg, #1a0640 0%, #3b0764 45%, #1e0545 75%, #0a0a0a 100%);
+  opacity: 0.75;
+  filter: brightness(0.45);
 }
-.hero-wave-streak {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: linear-gradient(130deg, transparent 25%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0.38) 50%, rgba(255,255,255,0.15) 60%, transparent 75%);
-}
-.dark .hero-wave-streak {
-  background: linear-gradient(130deg, transparent 25%, rgba(255,255,255,0.04) 40%, rgba(255,255,255,0.09) 50%, rgba(255,255,255,0.04) 60%, transparent 75%);
-}
+.hero-wave-streak { display: none; }
 
 /* ── Blur-in headline ────────────────────────── */
 .blur-headline { perspective: 800px; }
