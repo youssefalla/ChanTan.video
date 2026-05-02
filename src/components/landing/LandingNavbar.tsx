@@ -7,7 +7,7 @@ import { useT } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const CanTanLogo = () => (
-  <img src="/logo.png" alt="CanTan" width={28} height={28} style={{ objectFit: "contain" }} />
+  <img src="/logo-new.png" alt="CanTan·Video" height={32} style={{ objectFit: "contain", width: "auto" }} />
 );
 
 const SunIcon = () => (
@@ -84,11 +84,8 @@ export default function LandingNavbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.625rem", textDecoration: "none", flexShrink: 0 }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
           <CanTanLogo />
-          <span className="font-display" style={{ fontSize: "1.1rem", color: "var(--text-primary)" }}>
-            CanTan<span style={{ color: "#7C3AED" }}>·</span>Video
-          </span>
         </Link>
 
         {/* Desktop links */}
