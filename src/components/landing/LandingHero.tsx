@@ -156,6 +156,9 @@ export default function LandingHero() {
 
   return (
     <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", overflow: "hidden" }}>
+      {/* Purple wave gradient — hero only */}
+      <div className="hero-wave-gradient" />
+      <div className="hero-wave-streak" />
       {/* Background */}
       <div className="hero-bg">
         <div className="hero-grid" />
@@ -170,7 +173,7 @@ export default function LandingHero() {
         </svg>
       </div>
 
-      <div style={{ position: "relative", maxWidth: "72rem", margin: "0 auto", width: "100%", display: "grid", gap: "3rem", alignItems: "center" }} className="lg:grid-cols-2">
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "72rem", margin: "0 auto", width: "100%", display: "grid", gap: "3rem", alignItems: "center" }} className="lg:grid-cols-2">
         {/* Left: text */}
         <div className="reveal-left">
           <div className="font-mono" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--text-secondary)", border: "1px solid rgba(10,10,10,0.1)", borderRadius: "9999px", padding: "0.375rem 0.75rem" }}>
