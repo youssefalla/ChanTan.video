@@ -175,15 +175,15 @@ export default function LandingHero() {
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: "72rem", margin: "0 auto", width: "100%", display: "grid", gap: "3rem", alignItems: "center" }} className="lg:grid-cols-2">
         {/* Left: text */}
-        <div className="reveal-left">
-          <div className="font-mono" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--text-secondary)", border: "1px solid rgba(10,10,10,0.1)", borderRadius: "9999px", padding: "0.375rem 0.75rem" }}>
+        <div className="reveal-left hero-text-col">
+          <div className="font-mono hero-badge" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--text-secondary)", border: "1px solid rgba(10,10,10,0.1)", borderRadius: "9999px", padding: "0.375rem 0.75rem" }}>
             <span style={{ width: "0.375rem", height: "0.375rem", borderRadius: "9999px", background: "#7C3AED", flexShrink: 0 }} />
             AI-Powered · Always Rendering
           </div>
 
           <h1
             ref={headlineRef}
-            className="font-display blur-headline no-line"
+            className="font-display blur-headline no-line hero-headline"
             style={{ marginTop: "1.5rem", fontSize: "clamp(2.75rem, 6.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.03em", fontWeight: 800 }}
           >
             <span className="bw">Edit</span>{" "}
@@ -198,7 +198,7 @@ export default function LandingHero() {
             </span>
           </h1>
 
-          <p style={{ marginTop: "1.5rem", maxWidth: "38rem", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
+          <p className="hero-sub" style={{ marginTop: "1.5rem", maxWidth: "38rem", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
             CanTan·Video is the AI editing engine for creators who have ideas but no time.
             Drop footage, pick a style, and ship a polished video in minutes.
           </p>
@@ -215,7 +215,7 @@ export default function LandingHero() {
             </a>
           </div>
 
-          <div className="font-mono" style={{ marginTop: "2.5rem", display: "flex", alignItems: "center", gap: "1rem", fontSize: "0.65rem", color: "var(--text-secondary)", flexWrap: "wrap" }}>
+          <div className="font-mono hero-sub" style={{ marginTop: "2.5rem", display: "flex", alignItems: "center", gap: "1rem", fontSize: "0.65rem", color: "var(--text-secondary)", flexWrap: "wrap" }}>
             <span>NO TIMELINE NEEDED</span>
             <span style={{ width: "0.25rem", height: "0.25rem", borderRadius: "9999px", background: "currentColor", opacity: 0.4 }} />
             <span>CANCEL ANYTIME</span>

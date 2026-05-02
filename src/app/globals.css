@@ -871,6 +871,14 @@ body { overflow-x: clip; }
 .hero-grid { display: none; }
 .particles { display: none; }
 
+/* ── Hero text — white on purple background (light mode only) ── */
+.hero-headline .bw { color: #ffffff !important; }
+.hero-sub { color: rgba(255,255,255,0.75) !important; }
+.hero-badge { color: rgba(255,255,255,0.75) !important; border-color: rgba(255,255,255,0.25) !important; }
+.dark .hero-headline .bw { color: var(--text-primary) !important; }
+.dark .hero-sub { color: var(--text-secondary) !important; }
+.dark .hero-badge { color: var(--text-secondary) !important; border-color: rgba(10,10,10,0.1) !important; }
+
 /* ── Hero purple wave background ─────────────── */
 .hero-wave-gradient {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
