@@ -7,7 +7,7 @@ import { useT } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const CanTanLogo = () => (
-  <img src="/logo-new.png" alt="CanTan·Video" height={32} style={{ objectFit: "contain", width: "auto" }} />
+  <img src="/logo-new.png" alt="CanTan·Video" style={{ height: "28px", width: "auto", maxWidth: "140px", objectFit: "contain" }} />
 );
 
 const SunIcon = () => (
