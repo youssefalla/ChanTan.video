@@ -12,7 +12,7 @@ export function GoldGradientBg({ children }: GoldGradientBgProps) {
   const dark = theme === "dark";
 
   return (
-    <div style={{ position: "relative", width: "100%", background: dark ? "#000000" : "#ffffff" }}>
+    <div style={{ position: "relative", width: "100%", background: dark ? "#000000" : "#f5f3ff" }}>
       <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
     </div>
   );
