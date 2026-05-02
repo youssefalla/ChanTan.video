@@ -16,7 +16,7 @@ export default function HowItWorks() {
     <section id="how" style={{ position: "relative" }}>
       <div style={{ maxWidth: "56rem", margin: "0 auto", padding: "7rem 1.5rem" }}>
         <div className="reveal" style={{ textAlign: "center", maxWidth: "36rem", margin: "0 auto 5rem" }}>
-          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#D4AF37" }}>— {T.how.label}</div>
+          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#7C3AED" }}>— {T.how.label}</div>
           <h2 className="font-display blur-headline" data-blur="section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.03em", marginTop: "0.75rem", lineHeight: 1 }}>
             <BlurWords text={T.how.title} />
           </h2>
@@ -24,11 +24,11 @@ export default function HowItWorks() {
         </div>
 
         <ol style={{ position: "relative", listStyle: "none", padding: 0, margin: 0 }} className="stagger">
-          <span style={{ position: "absolute", left: "1.6875rem", top: "0.5rem", bottom: "0.5rem", width: "1px", background: "linear-gradient(to bottom, transparent, rgba(212,175,55,0.4), transparent)" }} />
+          <span style={{ position: "absolute", left: "1.6875rem", top: "0.5rem", bottom: "0.5rem", width: "1px", background: "linear-gradient(to bottom, transparent, rgba(124,58,237,0.4), transparent)" }} />
 
           {steps.map(({ num, title, desc, time }, i) => (
             <li key={num} className="reveal" style={{ position: "relative", paddingLeft: "5rem", paddingBottom: i < steps.length - 1 ? "3.5rem" : 0 }}>
-              <div className="step-dot font-display" style={{ position: "absolute", left: 0, top: 0, width: "3.5rem", height: "3.5rem", borderRadius: "9999px", display: "grid", placeItems: "center", fontSize: "1.5rem", color: "#D4AF37" }}>
+              <div className="step-dot font-display" style={{ position: "absolute", left: 0, top: 0, width: "3.5rem", height: "3.5rem", borderRadius: "9999px", display: "grid", placeItems: "center", fontSize: "1.5rem", color: "#7C3AED" }}>
                 {num}
               </div>
               <h3 className="font-display" style={{ fontSize: "1.875rem", lineHeight: 1.1 }}>{title}</h3>

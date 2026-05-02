@@ -6,8 +6,8 @@ import { useTheme } from "@/lib/theme";
 import { useT } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
-const ArtemisLogo = () => (
-  <img src="/logo.png" alt="Artemis" width={28} height={28} style={{ objectFit: "contain" }} />
+const CanTanLogo = () => (
+  <img src="/logo.png" alt="CanTan" width={28} height={28} style={{ objectFit: "contain" }} />
 );
 
 const SunIcon = () => (
@@ -77,17 +77,17 @@ export default function LandingNavbar() {
           background: theme === "dark" ? "rgba(8,8,12,0.45)" : "rgba(255,255,255,0.55)",
           backdropFilter: "blur(28px) saturate(180%)",
           WebkitBackdropFilter: "blur(28px) saturate(180%)",
-          border: theme === "dark" ? "1px solid rgba(212,175,55,0.12)" : "1px solid rgba(0,0,0,0.06)",
+          border: theme === "dark" ? "1px solid rgba(124,58,237,0.12)" : "1px solid rgba(0,0,0,0.06)",
           boxShadow: theme === "dark"
-            ? "0 2px 24px -8px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.05), inset 0 -1px 0 rgba(212,175,55,0.06)"
+            ? "0 2px 24px -8px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.05), inset 0 -1px 0 rgba(124,58,237,0.06)"
             : "0 2px 24px -8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)",
         }}
       >
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.625rem", textDecoration: "none", flexShrink: 0 }}>
-          <ArtemisLogo />
+          <CanTanLogo />
           <span className="font-display" style={{ fontSize: "1.1rem", color: "var(--text-primary)" }}>
-            Artemis<span style={{ color: "#D4AF37" }}>·</span>Trader
+            CanTan<span style={{ color: "#7C3AED" }}>·</span>Video
           </span>
         </Link>
 
@@ -122,7 +122,8 @@ export default function LandingNavbar() {
               color: "var(--text-secondary)",
               transition: "border-color 0.2s, color 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#D4AF37")}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#7C3AED")}
+
             onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(10,10,10,0.1)")}
           >
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}

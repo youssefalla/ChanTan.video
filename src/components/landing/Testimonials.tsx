@@ -5,28 +5,28 @@ import BlurWords from "@/components/ui/BlurWords";
 
 const Stars = () => (
   <div style={{ display: "flex", alignItems: "center", gap: "0.125rem" }}>
-    {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "#D4AF37" }}>★</span>)}
+    {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "#7C3AED" }}>★</span>)}
   </div>
 );
 
 const col1 = [
   {
     stars: true,
-    quote: "“My P&L stopped depending on my mood. That alone was worth it.”",
+    quote: ""My editing time went from 6 hours to 20 minutes. That alone changed my whole content schedule."",
     display: true,
-    name: "Marcus Holloway",
-    role: "FX swing · 4 years",
-    initials: "M",
-    bg: "linear-gradient(135deg, #E6C75A, #B8941F)",
-    color: "#0A0A0A",
+    name: "Layla Mercer",
+    role: "Travel vlogger · 480K subs",
+    initials: "L",
+    bg: "linear-gradient(135deg, #A78BFA, #5B21B6)",
+    color: "#ffffff",
   },
   {
     stars: true,
-    quote: "The risk caps are non-negotiable. I appreciate that — discipline I can’t override at 2 a.m. is the discipline I actually need.",
+    quote: "The auto-captions are scary accurate — even with my accent. Stopped paying a separate captioning tool immediately.",
     display: false,
-    name: "Dana Yeoh",
-    role: "Equities · prop firm",
-    initials: "D",
+    name: "Kwame Asante",
+    role: "Tech creator · Ghana",
+    initials: "K",
     bg: "#0A0A0A",
     color: "#F5F4EE",
   },
@@ -35,46 +35,46 @@ const col1 = [
 const col2 = [
   {
     stars: true,
-    quote: "“I sized down expectations and sized up consistency. Eight months in, my volatility-adjusted returns beat anything I did manually.”",
+    quote: ""I shipped 4 videos in the time it used to take me to edit one. CanTan doesn't just save time — it changes what's possible in a week."",
     display: true,
     large: true,
-    name: "Amelie Trager",
-    role: "Quant · Zurich",
-    initials: "A",
-    bg: "linear-gradient(135deg, #0A0A0A, #2A2A30)",
-    color: "#D4AF37",
+    name: "Sofia Navarro",
+    role: "Lifestyle creator · Madrid",
+    initials: "S",
+    bg: "linear-gradient(135deg, #0A0A0A, #1a0a3e)",
+    color: "#A78BFA",
     featured: true,
   },
   {
     stars: true,
-    quote: "Setup took six minutes. The first week paid for the year. I’m not a power user — that’s the point.",
+    quote: "Setup took four minutes. The first export looked like I had a professional editor. I've never looked back.",
     display: false,
-    name: "Rohit Banerjee",
-    role: "Crypto · part-time",
+    name: "Remy Fontaine",
+    role: "Short-form · Paris",
     initials: "R",
-    bg: "linear-gradient(135deg, #F5F4EE, #FFFFFF)",
-    color: "#0A0A0A",
-    border: "1px solid rgba(0,0,0,0.1)",
+    bg: "linear-gradient(135deg, #F5F4EE, #EDE9FE)",
+    color: "#5B21B6",
+    border: "1px solid rgba(124,58,237,0.15)",
   },
 ];
 
 const col3 = [
   {
     stars: true,
-    quote: "The dashboards are gorgeous and the broker reconciliation is to-the-cent. Two things most automation tools fail at.",
+    quote: "The color grading AI matched my brand perfectly from the first clip. I didn't touch a single slider.",
     display: false,
-    name: "Sofía Ruiz",
-    role: "Indices · Madrid",
-    initials: "S",
-    bg: "linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.6))",
+    name: "Priya Mehta",
+    role: "Beauty creator · Mumbai",
+    initials: "P",
+    bg: "linear-gradient(135deg, rgba(124,58,237,0.3), rgba(124,58,237,0.6))",
     color: "#0A0A0A",
   },
   {
     stars: true,
-    quote: "“Quiet, dependable, slightly luxurious. Feels like my Patek for portfolios.”",
+    quote: ""Quiet, dependable, slightly magical. Feels like having a full edit suite in my back pocket."",
     display: true,
-    name: "Julian Voss",
-    role: "Macro · Berlin",
+    name: "Jonas Weber",
+    role: "Documentary · Berlin",
     initials: "J",
     bg: "#0A0A0A",
     color: "#F5F4EE",
@@ -88,13 +88,13 @@ function Card({ t }: { t: typeof col1[0] & { large?: boolean; featured?: boolean
       style={{
         borderRadius: "1rem",
         padding: t.large ? "1.75rem" : "1.5rem",
-        border: t.featured ? "1px solid rgba(212,175,55,0.5)" : t.border,
-        boxShadow: t.featured ? "0 0 0 1px rgba(212,175,55,0.2) inset" : undefined,
+        border: t.featured ? "1px solid rgba(124,58,237,0.5)" : t.border,
+        boxShadow: t.featured ? "0 0 0 1px rgba(124,58,237,0.2) inset" : undefined,
       }}
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <Stars />
-        {t.featured && <span className="font-mono" style={{ fontSize: "0.625rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "#D4AF37" }}>Featured</span>}
+        {t.featured && <span className="font-mono" style={{ fontSize: "0.625rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "#7C3AED" }}>Featured</span>}
       </div>
       <p
         className={t.display ? "font-display" : ""}
@@ -121,14 +121,14 @@ export default function Testimonials() {
     <section id="voices" style={{ maxWidth: "72rem", margin: "0 auto", padding: "7rem 1.5rem" }}>
       <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem", marginBottom: "3.5rem" }}>
         <div className="reveal-left">
-          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#D4AF37" }}>— {T.testimonials.label}</div>
+          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#7C3AED" }}>— {T.testimonials.label}</div>
           <h2 className="font-display blur-headline" data-blur="section" style={{ fontSize: "clamp(2.5rem, 6vw, 3.75rem)", letterSpacing: "-0.03em", marginTop: "0.75rem", lineHeight: 1 }}>
             <BlurWords text={T.testimonials.title} />
           </h2>
         </div>
         <div className="reveal-right" style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.875rem" }}>
           <Stars />
-          <span className="font-mono" style={{ color: "var(--text-secondary)" }}>4.9 · 2,418 reviews</span>
+          <span className="font-mono" style={{ color: "var(--text-secondary)" }}>4.9 · 3,812 reviews</span>
         </div>
       </div>
 

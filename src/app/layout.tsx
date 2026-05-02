@@ -21,17 +21,17 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Artemis Trader — Automated Forex & Gold Trading",
+  title: "CanTan·Video — AI Video Editing for Creators",
   description:
-    "Connect your XM MT5 account and let Artemis trade Forex and Gold for you. Trading Automation & Peace of Mind.",
-  keywords: ["forex trading", "automated trading", "MT5 bot", "XM broker", "gold trading"],
+    "Drop your footage and let CanTan·Video do the heavy lifting. AI-powered cuts, color grading, captions, and one-click export to every platform.",
+  keywords: ["AI video editing", "video editor", "auto captions", "color grading AI", "YouTube editor", "TikTok editor"],
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Artemis Trader",
-    description: "Trading Automation & Peace of Mind",
+    title: "CanTan·Video",
+    description: "AI-Powered Video Editing for Creators",
     type: "website",
   },
 };
@@ -47,7 +47,7 @@ export default function RootLayout({
         {/* Fallback for first-time visitors with no cookie — syncs localStorage → cookie */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('artemis-theme');if(t){document.documentElement.classList.toggle('dark',t==='dark');document.cookie='artemis-theme='+t+';path=/;max-age=31536000;SameSite=Lax';}})()`,
+            __html: `(function(){var t=localStorage.getItem('cantan-theme');if(t){document.documentElement.classList.toggle('dark',t==='dark');document.cookie='cantan-theme='+t+';path=/;max-age=31536000;SameSite=Lax';}})()`,
           }}
         />
       </head>

@@ -46,7 +46,7 @@ function Overlay({ exiting }: { exiting: boolean }) {
             alt="Artemis"
             width={56}
             height={56}
-            style={{ objectFit: "contain", filter: "drop-shadow(0 0 18px rgba(212,175,55,0.45))" }}
+            style={{ objectFit: "contain", filter: "drop-shadow(0 0 18px rgba(124,58,237,0.45))" }}
           />
         </div>
 
@@ -54,20 +54,20 @@ function Overlay({ exiting }: { exiting: boolean }) {
           <span className="font-display" style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--text-primary, #1a1200)", letterSpacing: "-0.03em", lineHeight: 1 }}>
             Artemis
           </span>
-          <span className="ls-dot" style={{ color: "#D4AF37", fontSize: "1.6rem", fontWeight: 700, lineHeight: 1, margin: "0 0.05rem" }}>·</span>
+          <span className="ls-dot" style={{ color: "#7C3AED", fontSize: "1.6rem", fontWeight: 700, lineHeight: 1, margin: "0 0.05rem" }}>·</span>
           <span className="font-display" style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--text-primary, #1a1200)", letterSpacing: "-0.03em", lineHeight: 1 }}>
             Trader
           </span>
         </div>
 
-        <p className="ls-sub font-mono" style={{ fontSize: "0.62rem", textTransform: "uppercase", letterSpacing: "0.18em", color: "#D4AF37", marginTop: "0.5rem", opacity: 0.85 }}>
+        <p className="ls-sub font-mono" style={{ fontSize: "0.62rem", textTransform: "uppercase", letterSpacing: "0.18em", color: "#7C3AED", marginTop: "0.5rem", opacity: 0.85 }}>
           Trading Automation
         </p>
 
         <div className="ls-line" style={{
           marginTop: "2rem", width: "10rem", height: "2px",
-          background: "linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.4) 20%, #D4AF37 50%, rgba(212,175,55,0.4) 80%, transparent 100%)",
-          boxShadow: "0 0 12px rgba(212,175,55,0.55), 0 0 32px rgba(212,175,55,0.2)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(124,58,237,0.4) 20%, #7C3AED 50%, rgba(124,58,237,0.4) 80%, transparent 100%)",
+          boxShadow: "0 0 12px rgba(124,58,237,0.55), 0 0 32px rgba(124,58,237,0.2)",
         }} />
       </div>
     </>

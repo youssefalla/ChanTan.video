@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useT } from "@/lib/i18n";
 
-const ArtemisLogo = () => (
-  <img src="/logo.png" alt="Artemis" width={28} height={28} style={{ objectFit: "contain" }} />
+const CanTanLogo = () => (
+  <div style={{ width: 28, height: 28, borderRadius: "0.5rem", background: "linear-gradient(135deg, #5B21B6, #7C3AED)", display: "grid", placeItems: "center" }}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.876v6.248a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" /></svg>
+  </div>
 );
 
 export default function Footer() {
@@ -17,13 +19,13 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: "span 2" }}>
             <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.625rem", textDecoration: "none" }}>
-              <ArtemisLogo />
+              <CanTanLogo />
               <span className="font-display" style={{ fontSize: "1.1rem", color: "var(--text-primary)" }}>
-                Artemis<span style={{ color: "#D4AF37" }}>·</span>Trader
+                CanTan<span style={{ color: "#7C3AED" }}>·</span>Video
               </span>
             </Link>
             <p style={{ marginTop: "1.25rem", fontSize: "0.875rem", color: "var(--text-secondary)", maxWidth: "22rem", lineHeight: 1.7 }}>
-              Trading automation &amp; peace of mind. Built for self-directed traders who want their nights back.
+              AI-powered video editing for creators who want to ship more and stress less.
             </p>
             <div style={{ marginTop: "1.5rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
               {[
@@ -36,7 +38,7 @@ export default function Footer() {
                   href="#"
                   aria-label={label}
                   style={{ width: "2.25rem", height: "2.25rem", display: "grid", placeItems: "center", borderRadius: "9999px", border: "1px solid var(--border)", textDecoration: "none", color: "var(--text-secondary)", transition: "border-color 0.2s, color 0.2s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#D4AF37"; e.currentTarget.style.color = "#D4AF37"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#7C3AED"; e.currentTarget.style.color = "#7C3AED"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">{icon}</svg>
@@ -52,7 +54,7 @@ export default function Footer() {
               {[T.footer.lFeatures, T.footer.lPricing, T.footer.lHow, T.footer.lDocs].map((item) => (
                 <li key={item}>
                   <a href="#" style={{ fontSize: "0.875rem", color: "var(--text-primary)", textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#D4AF37")}
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#7C3AED")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "var(--text-primary)")}>
                     {item}
                   </a>
@@ -68,7 +70,7 @@ export default function Footer() {
               {[T.footer.lAbout, T.footer.lCareers, T.footer.lBlog].map((item) => (
                 <li key={item}>
                   <a href="#" style={{ fontSize: "0.875rem", color: "var(--text-primary)", textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#D4AF37")}
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#7C3AED")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "var(--text-primary)")}>
                     {item}
                   </a>
@@ -84,7 +86,7 @@ export default function Footer() {
               {[T.footer.lPrivacy, T.footer.lTerms, T.footer.lSecurity].map((item) => (
                 <li key={item}>
                   <a href="#" style={{ fontSize: "0.875rem", color: "var(--text-primary)", textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#D4AF37")}
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#7C3AED")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "var(--text-primary)")}>
                     {item}
                   </a>

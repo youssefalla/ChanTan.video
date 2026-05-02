@@ -19,10 +19,10 @@ export function GoldGradientBg({ children }: GoldGradientBgProps) {
   const { theme } = useTheme();
   const dark = theme === "dark";
 
-  const goldFull = dark ? "rgb(212, 175, 55)" : "rgb(184, 148, 31)";
-  const goldFade = dark ? "rgba(212, 175, 55, 0)" : "rgba(184, 148, 31, 0)";
-  const streakOpacity = dark ? 0.22 : 0.10;
-  const dotColor = dark ? "rgba(212,175,55,0.55)" : "rgba(184,148,31,0.35)";
+  const purpleFull = dark ? "rgb(124, 58, 237)" : "rgb(91, 33, 182)";
+  const purpleFade = dark ? "rgba(124, 58, 237, 0)" : "rgba(91, 33, 182, 0)";
+  const streakOpacity = dark ? 0.18 : 0.08;
+  const dotColor = dark ? "rgba(124,58,237,0.55)" : "rgba(91,33,182,0.35)";
 
   return (
     <div
@@ -41,8 +41,8 @@ export function GoldGradientBg({ children }: GoldGradientBgProps) {
           pointerEvents: "none",
           opacity: dark ? 0.3 : 1,
           background: dark
-            ? "radial-gradient(100% 100% at 0% 0%, rgb(28, 22, 6) 0%, rgb(0, 0, 0) 100%)"
-            : "radial-gradient(100% 100% at 0% 0%, rgb(255, 251, 228) 0%, rgb(255, 255, 255) 100%)",
+            ? "radial-gradient(100% 100% at 0% 0%, rgb(18, 10, 42) 0%, rgb(0, 0, 0) 100%)"
+            : "radial-gradient(100% 100% at 0% 0%, rgb(245, 240, 255) 0%, rgb(255, 255, 255) 100%)",
           mask: "radial-gradient(125% 100% at 0% 0%, rgb(0,0,0) 0%, rgba(0,0,0,0.224) 88%, rgba(0,0,0,0) 100%)",
           WebkitMask: "radial-gradient(125% 100% at 0% 0%, rgb(0,0,0) 0%, rgba(0,0,0,0.224) 88%, rgba(0,0,0,0) 100%)",
         }}
@@ -55,7 +55,7 @@ export function GoldGradientBg({ children }: GoldGradientBgProps) {
               position: "absolute",
               inset: 0,
               opacity: streakOpacity,
-              background: `linear-gradient(${goldFull} 0%, ${goldFade} 100%)`,
+              background: `linear-gradient(${purpleFull} 0%, ${purpleFade} 100%)`,
               mask,
               WebkitMask: mask,
               transform: "skewX(45deg)",
@@ -85,8 +85,8 @@ export function GoldGradientBg({ children }: GoldGradientBgProps) {
           zIndex: 0,
           pointerEvents: "none",
           background: dark
-            ? "radial-gradient(60% 50% at 50% 0%, rgba(212,175,55,0.06) 0%, transparent 100%)"
-            : "radial-gradient(60% 50% at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 100%)",
+            ? "radial-gradient(60% 50% at 50% 0%, rgba(124,58,237,0.06) 0%, transparent 100%)"
+            : "radial-gradient(60% 50% at 50% 0%, rgba(124,58,237,0.08) 0%, transparent 100%)",
         }}
       />
 

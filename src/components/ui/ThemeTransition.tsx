@@ -57,7 +57,7 @@ export default function ThemeTransition() {
             alt="Artemis"
             width={48}
             height={48}
-            style={{ objectFit: "contain", filter: "drop-shadow(0 0 14px rgba(212,175,55,0.4))" }}
+            style={{ objectFit: "contain", filter: "drop-shadow(0 0 14px rgba(124,58,237,0.4))" }}
           />
         </div>
 
@@ -70,7 +70,7 @@ export default function ThemeTransition() {
           </span>
           <span
             className="tt-dot"
-            style={{ color: "#D4AF37", fontSize: "1.45rem", fontWeight: 700, lineHeight: 1, margin: "0 0.05rem" }}
+            style={{ color: "#7C3AED", fontSize: "1.45rem", fontWeight: 700, lineHeight: 1, margin: "0 0.05rem" }}
           >·</span>
           <span
             className="font-display"
@@ -82,15 +82,15 @@ export default function ThemeTransition() {
 
         <p
           className="tt-sub font-mono"
-          style={{ fontSize: "0.58rem", textTransform: "uppercase", letterSpacing: "0.18em", color: "#D4AF37", marginTop: "0.45rem", opacity: 0.8 }}
+          style={{ fontSize: "0.58rem", textTransform: "uppercase", letterSpacing: "0.18em", color: "#7C3AED", marginTop: "0.45rem", opacity: 0.8 }}
         >
           {typeof window !== "undefined" && document.documentElement.classList.contains("dark") ? "Dark Mode" : "Light Mode"}
         </p>
 
         <div className="tt-line" style={{
           marginTop: "1.5rem", width: "9rem", height: "2px",
-          background: "linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.4) 20%, #D4AF37 50%, rgba(212,175,55,0.4) 80%, transparent 100%)",
-          boxShadow: "0 0 12px rgba(212,175,55,0.55), 0 0 32px rgba(212,175,55,0.2)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(124,58,237,0.4) 20%, #7C3AED 50%, rgba(124,58,237,0.4) 80%, transparent 100%)",
+          boxShadow: "0 0 12px rgba(124,58,237,0.55), 0 0 32px rgba(124,58,237,0.2)",
         }} />
       </div>
     </>

@@ -38,7 +38,7 @@ export default function LanguageSwitcher({ compact = false, dropUp = false }: { 
           transition: "border-color 0.2s, color 0.2s",
           fontFamily: "inherit",
         }}
-        onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#D4AF37"; e.currentTarget.style.color = "#D4AF37"; }}
+        onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#7C3AED"; e.currentTarget.style.color = "#7C3AED"; }}
         onMouseLeave={(e) => { e.currentTarget.style.borderColor = dark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.10)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
       >
         {!compact && <span>{current.label}</span>}
@@ -69,9 +69,9 @@ export default function LanguageSwitcher({ compact = false, dropUp = false }: { 
               style={{
                 display: "flex", alignItems: "center", gap: "0.6rem",
                 width: "100%", padding: "0.6rem 0.875rem",
-                background: l.code === lang ? (dark ? "rgba(212,175,55,0.12)" : "rgba(212,175,55,0.10)") : "transparent",
+                background: l.code === lang ? (dark ? "rgba(124,58,237,0.12)" : "rgba(124,58,237,0.10)") : "transparent",
                 border: "none", cursor: "pointer",
-                color: l.code === lang ? "#D4AF37" : "var(--text-primary)",
+                color: l.code === lang ? "#7C3AED" : "var(--text-primary)",
                 fontSize: "0.875rem", fontWeight: l.code === lang ? 600 : 400,
                 textAlign: "left", fontFamily: "inherit",
                 transition: "background 0.15s",

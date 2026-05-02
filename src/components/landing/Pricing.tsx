@@ -26,7 +26,7 @@ function runCanvas(canvas: HTMLCanvasElement) {
       vx: (Math.random() - 0.5) * 0.6,
       vy: (Math.random() - 0.5) * 0.4,
       len: 60 + Math.random() * 80,
-      hue: 42 + Math.random() * 16,
+      hue: 265 + Math.random() * 30,
       alpha: 0.2 + Math.random() * 0.4,
     });
   }
@@ -116,7 +116,7 @@ export default function Pricing() {
       <canvas ref={canvasRef} aria-hidden="true" />
       <div style={{ position: "relative", maxWidth: "72rem", margin: "0 auto" }}>
         <div className="reveal" style={{ textAlign: "center", maxWidth: "36rem", margin: "0 auto" }}>
-          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#D4AF37" }}>— {T.pricing.label}</div>
+          <div className="font-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#7C3AED" }}>— {T.pricing.label}</div>
           <h2 className="font-display blur-headline" data-blur="section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.03em", marginTop: "0.75rem", lineHeight: 1 }}>
             <BlurWords text={T.pricing.title1} />
             <br />
@@ -136,9 +136,9 @@ export default function Pricing() {
                 </div>
               )}
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <div className="font-mono" style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.12em", color: featured ? "#D4AF37" : "var(--text-secondary)" }}>{tier}</div>
+                <div className="font-mono" style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.12em", color: featured ? "#7C3AED" : "var(--text-secondary)" }}>{tier}</div>
                 {!featured && badge && (
-                  <span className="font-mono" style={{ fontSize: "0.625rem", textTransform: "uppercase", letterSpacing: "0.12em", padding: "0.125rem 0.5rem", borderRadius: "9999px", border: "1px solid rgba(212,175,55,0.4)", color: "#D4AF37" }}>{badge}</span>
+                  <span className="font-mono" style={{ fontSize: "0.625rem", textTransform: "uppercase", letterSpacing: "0.12em", padding: "0.125rem 0.5rem", borderRadius: "9999px", border: "1px solid rgba(124,58,237,0.4)", color: "#7C3AED" }}>{badge}</span>
                 )}
               </div>
               <div className="font-display" style={{ fontSize: "3rem", letterSpacing: "-0.04em", marginTop: "0.75rem" }}>
@@ -149,7 +149,7 @@ export default function Pricing() {
               <ul style={{ marginTop: "1.5rem", flex: 1, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {features.map((f) => (
                   <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.9rem" }}>
-                    <span style={{ color: "#D4AF37", marginTop: "0.1rem", flexShrink: 0 }}>●</span>
+                    <span style={{ color: "#7C3AED", marginTop: "0.1rem", flexShrink: 0 }}>●</span>
                     {f}
                   </li>
                 ))}

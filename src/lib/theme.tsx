@@ -30,8 +30,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTimeout(() => {
       setTheme(next);
       document.documentElement.classList.toggle("dark", next === "dark");
-      localStorage.setItem("artemis-theme", next);
-      document.cookie = `artemis-theme=${next};path=/;max-age=31536000;SameSite=Lax`;
+      localStorage.setItem("cantan-theme", next);
+      document.cookie = `cantan-theme=${next};path=/;max-age=31536000;SameSite=Lax`;
     }, 150);
     // Hide overlay after theme has settled
     setTimeout(() => setIsTransitioning(false), 620);
