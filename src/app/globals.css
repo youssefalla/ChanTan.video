@@ -874,28 +874,13 @@ body { overflow-x: clip; }
 /* ── Hero purple wave background ─────────────── */
 .hero-wave-gradient {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 80% 70% at 15% 60%, rgba(255,255,255,0.85) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 85% 30%, rgba(109,40,217,0.9) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 60% at 55% 20%, rgba(49,10,120,0.95) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 70% 75%, rgba(139,92,246,0.8) 0%, transparent 55%),
-    linear-gradient(135deg, #c4b5fd 0%, #7c3aed 35%, #3b0764 65%, #6d28d9 100%);
+  background: url('/hero-bg.png') center center / cover no-repeat;
 }
 .dark .hero-wave-gradient {
-  background:
-    radial-gradient(ellipse 60% 55% at 10% 55%, rgba(30,10,80,0.9) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 70% at 85% 25%, rgba(88,28,220,0.75) 0%, transparent 55%),
-    radial-gradient(ellipse 65% 55% at 50% 15%, rgba(20,5,60,0.98) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 45% at 65% 80%, rgba(109,40,217,0.65) 0%, transparent 55%),
-    linear-gradient(135deg, #0d0520 0%, #3b0764 35%, #1e0545 65%, #2e1065 100%);
+  opacity: 0.75;
+  filter: brightness(0.45);
 }
-.hero-wave-streak {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.18) 55%, transparent 70%);
-}
-.dark .hero-wave-streak {
-  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.05) 45%, rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.05) 55%, transparent 70%);
-}
+.hero-wave-streak { display: none; }
 
 /* ── Blur-in headline ────────────────────────── */
 .blur-headline { perspective: 800px; }
