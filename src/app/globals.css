@@ -3,8 +3,8 @@
 /* ── Light mode (default) ──────────────────────────── */
 :root {
   --background: #FFFFFF;
-  --surface: #FAFAF7;
-  --surface-2: #F5F4EE;
+  --surface: rgba(255,255,255,0.22);
+  --surface-2: rgba(255,255,255,0.12);
   --border: rgba(10,10,10,0.08);
   --text-primary: #0A0A0A;
   --text-secondary: rgba(10,10,10,0.65);
@@ -26,8 +26,8 @@
 /* ── Dark mode ─────────────────────────────────────── */
 .dark {
   --background: #0A0A0A;
-  --surface: #15151A;
-  --surface-2: #120a2a;
+  --surface: rgba(255,255,255,0.06);
+  --surface-2: rgba(124,58,237,0.10);
   --border: rgba(124,58,237,0.18);
   --text-primary: #F5F4EE;
   --text-secondary: rgba(245,244,238,0.65);
@@ -193,7 +193,7 @@ body { overflow-x: clip; }
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.07),
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -1px 0 rgba(124,58,237,0.10);
@@ -206,7 +206,7 @@ body { overflow-x: clip; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(124,58,237,0.35);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.35),
     inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -1px 0 rgba(124,58,237,0.15);
@@ -222,7 +222,7 @@ body { overflow-x: clip; }
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   border: 1px solid rgba(124,58,237,0.30);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.07),
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -1px 0 rgba(124,58,237,0.10);
@@ -235,7 +235,7 @@ body { overflow-x: clip; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(124,58,237,0.35);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.35),
     inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -1px 0 rgba(124,58,237,0.15);
@@ -260,7 +260,7 @@ body { overflow-x: clip; }
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   border: 1px solid rgba(124,58,237,0.30);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.07),
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -1px 0 rgba(124,58,237,0.10);
@@ -273,7 +273,7 @@ body { overflow-x: clip; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(124,58,237,0.35);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.35),
     inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -1px 0 rgba(124,58,237,0.15);
@@ -292,7 +292,7 @@ body { overflow-x: clip; }
   border: 1px solid rgba(124,58,237,0.30);
   overflow: hidden;
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.07),
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -1px 0 rgba(124,58,237,0.10);
@@ -307,7 +307,7 @@ body { overflow-x: clip; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(124,58,237,0.35);
   box-shadow:
-    0 0 20px 4px rgba(124,58,237,0.22), 0 8px 32px rgba(124,58,237,0.18),
+    0 0 60px -8px rgba(124,58,237,0.40),
     0 8px 32px rgba(0,0,0,0.35),
     inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -1px 0 rgba(124,58,237,0.15);
@@ -320,23 +320,25 @@ body { overflow-x: clip; }
 .dash-card {
   transform: rotateX(14deg) rotateY(-10deg) rotateZ(1deg);
   transform-style: preserve-3d;
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
   box-shadow:
-    0 60px 160px  0px rgba(10,10,10,.07),
-    0 30px 80px   0px rgba(10,10,10,.05),
-    0 10px 30px   0px rgba(124,58,237,.08),
-    inset 0 1px 0 rgba(255,255,255,.6);
-  border: 1px solid rgba(10,10,10,.08);
-  background: linear-gradient(180deg, #ffffff 0%, #FAFAF7 100%);
+    0 60px 160px  0px rgba(10,10,10,.10),
+    0 30px 80px   0px rgba(10,10,10,.07),
+    0 10px 30px   0px rgba(124,58,237,.12),
+    inset 0 1px 0 rgba(255,255,255,.55);
   transition: transform 1.2s cubic-bezier(.22,.61,.36,1), box-shadow .4s ease;
 }
 .dark .dash-card {
-  background: linear-gradient(180deg, #15151A 0%, #0E0E12 100%);
-  border-color: rgba(124,58,237,.20);
+  background: rgba(15,10,30,0.45);
+  border-color: rgba(124,58,237,.30);
   box-shadow:
-    0 60px 160px  0px rgba(0,0,0,.30),
-    0 30px 80px   0px rgba(0,0,0,.18),
-    0 10px 30px   0px rgba(124,58,237,.10),
-    inset 0 1px 0 rgba(255,255,255,.04);
+    0 60px 160px  0px rgba(0,0,0,.35),
+    0 30px 80px   0px rgba(0,0,0,.22),
+    0 10px 30px   0px rgba(124,58,237,.15),
+    inset 0 1px 0 rgba(255,255,255,.06);
 }
 
 /* ── Dashboard shimmer ───────────────────────── */
