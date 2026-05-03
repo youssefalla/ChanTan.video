@@ -3,8 +3,8 @@
 /* ── Light mode (default) ──────────────────────────── */
 :root {
   --background: #FFFFFF;
-  --surface: rgba(255,255,255,0.22);
-  --surface-2: rgba(255,255,255,0.12);
+  --surface: rgba(255,255,255,0.50);
+  --surface-2: rgba(255,255,255,0.30);
   --border: rgba(10,10,10,0.08);
   --text-primary: #0A0A0A;
   --text-secondary: rgba(10,10,10,0.65);
@@ -26,8 +26,8 @@
 /* ── Dark mode ─────────────────────────────────────── */
 .dark {
   --background: #0A0A0A;
-  --surface: rgba(255,255,255,0.06);
-  --surface-2: rgba(124,58,237,0.10);
+  --surface: rgba(255,255,255,0.08);
+  --surface-2: rgba(124,58,237,0.12);
   --border: rgba(124,58,237,0.18);
   --text-primary: #F5F4EE;
   --text-secondary: rgba(245,244,238,0.65);
@@ -320,25 +320,25 @@ body { overflow-x: clip; }
 .dash-card {
   transform: rotateX(14deg) rotateY(-10deg) rotateZ(1deg);
   transform-style: preserve-3d;
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(60px) saturate(1.8) brightness(1.08);
+  -webkit-backdrop-filter: blur(60px) saturate(1.8) brightness(1.08);
+  background: rgba(255,255,255,0.52);
+  border: 1px solid rgba(255,255,255,0.70);
   box-shadow:
-    0 60px 160px  0px rgba(10,10,10,.10),
-    0 30px 80px   0px rgba(10,10,10,.07),
-    0 10px 30px   0px rgba(124,58,237,.12),
-    inset 0 1px 0 rgba(255,255,255,.55);
+    0 60px 160px  0px rgba(10,10,10,.12),
+    0 30px 80px   0px rgba(10,10,10,.08),
+    0 10px 30px   0px rgba(124,58,237,.14),
+    inset 0 1px 0 rgba(255,255,255,.90);
   transition: transform 1.2s cubic-bezier(.22,.61,.36,1), box-shadow .4s ease;
 }
 .dark .dash-card {
-  background: rgba(15,10,30,0.45);
-  border-color: rgba(124,58,237,.30);
+  background: rgba(20,12,40,0.60);
+  border-color: rgba(255,255,255,.14);
   box-shadow:
-    0 60px 160px  0px rgba(0,0,0,.35),
-    0 30px 80px   0px rgba(0,0,0,.22),
-    0 10px 30px   0px rgba(124,58,237,.15),
-    inset 0 1px 0 rgba(255,255,255,.06);
+    0 60px 160px  0px rgba(0,0,0,.40),
+    0 30px 80px   0px rgba(0,0,0,.25),
+    0 10px 30px   0px rgba(124,58,237,.18),
+    inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 /* ── Dashboard shimmer ───────────────────────── */
