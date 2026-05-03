@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -27,19 +28,6 @@ function triggerBlurIn(el: HTMLElement) {
   });
 }
 
-function buildClipBars(container: HTMLElement, seed: number) {
-  container.innerHTML = "";
-  const bars: HTMLElement[] = [];
-  const widths = [12, 18, 9, 22, 15, 8, 20, 14, 10, 17];
-  for (let i = 0; i < widths.length; i++) {
-    const b = document.createElement("div");
-    const hue = 260 + (i % 3) * 20;
-    b.style.cssText = `display:inline-block;height:100%;width:${widths[i]}px;border-radius:3px;background:hsla(${hue},70%,${50 + (i % 3) * 10}%,${0.55 + (i % 4) * 0.1});transition:opacity 0.8s ease;margin-right:2px;`;
-    container.appendChild(b);
-    bars.push(b);
-  }
-  return bars;
-}
 
 export default function LandingHero() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -51,12 +39,9 @@ export default function LandingHero() {
   const kpiScoreRef = useRef<HTMLSpanElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const progressLabelRef = useRef<HTMLSpanElement>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (headlineRef.current) triggerBlurIn(headlineRef.current);
     if (particlesRef.current) buildParticles(particlesRef.current);
-    if (timelineRef.current) buildClipBars(timelineRef.current, 1.3);
   }, []);
 
   useEffect(() => {
@@ -184,7 +169,7 @@ export default function LandingHero() {
           <h1
             ref={headlineRef}
             className="font-display blur-headline no-line"
-            style={{ marginTop: "1.5rem", fontSize: "clamp(2.75rem, 6.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.03em", fontWeight: 800, color: "#ffffff" }}
+            style={{ marginTop: "1.5rem", fontSize: "clamp(2.75rem, 6.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.03em", fontWeight: 800, color: "#ffffff", textShadow: "0 4px 24px rgba(0,0,0,0.35), 0 1px 6px rgba(0,0,0,0.25)" }}
           >
             <span className="bw">Edit</span>{" "}
             <span className="bw">Videos</span>
@@ -291,13 +276,34 @@ export default function LandingHero() {
                 <span style={{ fontSize: "0.75rem", fontWeight: 500 }}>Timeline</span>
                 <span className="font-mono" style={{ fontSize: "0.6rem", color: "#7C3AED" }}>5 tracks</span>
               </div>
-              {/* Clip track */}
-              <div style={{ display: "flex", gap: "2px", height: "1.5rem", alignItems: "center" }} ref={timelineRef} />
-              {/* Audio waveform */}
-              <div style={{ marginTop: "0.375rem", height: "1rem", display: "flex", alignItems: "center", gap: "1px" }}>
-                {Array.from({ length: 40 }).map((_, i) => (
-                  <div key={i} style={{ flex: 1, borderRadius: "1px", background: `rgba(124,58,237,${0.15 + Math.abs(Math.sin(i * 0.8)) * 0.55})`, height: `${30 + Math.abs(Math.sin(i * 0.8)) * 70}%` }} />
-                ))}
+              {/* Multi-track timeline */}
+              <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: "3px" }}>
+                {/* Playhead */}
+                <div style={{ position: "absolute", left: "44%", top: "-2px", bottom: "-2px", width: "1.5px", background: "#ef4444", zIndex: 10, pointerEvents: "none" }}>
+                  <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "4px solid transparent", borderRight: "4px solid transparent", borderTop: "6px solid #ef4444" }} />
+                </div>
+                {/* Track 1 — red + blue */}
+                <div style={{ height: "13px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "8%", width: "34%", height: "100%", borderRadius: "3px", background: "rgba(239,68,68,0.82)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                  <div style={{ position: "absolute", left: "56%", width: "34%", height: "100%", borderRadius: "3px", background: "rgba(96,165,250,0.82)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                </div>
+                {/* Track 2 — gold */}
+                <div style={{ height: "13px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "2%", width: "95%", height: "100%", borderRadius: "3px", background: "rgba(234,179,8,0.85)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                </div>
+                {/* Track 3 — purple x2 */}
+                <div style={{ height: "13px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "16%", width: "22%", height: "100%", borderRadius: "3px", background: "rgba(124,58,237,0.85)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                  <div style={{ position: "absolute", left: "40%", width: "9%", height: "100%", borderRadius: "3px", background: "rgba(124,58,237,0.85)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                </div>
+                {/* Track 4 — pink */}
+                <div style={{ height: "13px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "28%", width: "42%", height: "100%", borderRadius: "3px", background: "rgba(236,72,153,0.8)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                </div>
+                {/* Track 5 — green */}
+                <div style={{ height: "13px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "0%", width: "97%", height: "100%", borderRadius: "3px", background: "rgba(34,197,94,0.8)", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 2px,transparent 2px,transparent 8px)" }} />
+                </div>
               </div>
               <div className="font-mono" style={{ marginTop: "0.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "0.55rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-secondary)" }}>
                 <span>0:00</span>
